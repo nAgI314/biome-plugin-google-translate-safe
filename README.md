@@ -1,2 +1,2 @@
 # biome-plugin-google-translate-safe
-Google
+Google翻訳をかけてもクラッシュしない構造を強いるbiome plugin
