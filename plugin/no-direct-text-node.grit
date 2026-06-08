@@ -1,0 +1,13 @@
+language js(jsx);
+
+or {
+	`<$tag>$before{$_}$after</$tag>` as $el,
+	`<$tag>{$_}$after</$tag>` as $el,
+	`<$tag>$before{$_}</$tag>` as $el
+} where {
+	register_diagnostic(
+		span = $el,
+		message = "Text nodes mixed with expressions or elements are unsafe for Google Translate. Wrap all text in <span> tags.",
+		severity = "error"
+	)
+}
